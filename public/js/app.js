@@ -20,6 +20,7 @@ function getLocationAndWeather() {
                 var response2 = JSON.parse(xhr2.responseText);
                 console.log("weather response");
                 console.log(response2);
+                // This Api has some kelvin data that is why I am converting from Kelvin to Fahrenheit
                 var tempF = Math.round(response2.main.temp *
                     1.8 - 459.67);
                 document.querySelector("#temperature").textContent =
@@ -27,6 +28,12 @@ function getLocationAndWeather() {
                 // This single line of code was really interesting for a tiny array
                 document.querySelector("#description").textContent =
                     response2.weather[0].description;
+                /////////////////////////////////ICON Api Call////////////////////////////////////////
+                var icon = response2.weather[0].icon;
+                document.querySelector("#icon").src =
+                    "http://openweathermap.org/img/w/" +
+                    icon + ".png";
+                ///////////////////////////////////////////////////////////////////////////////////////
             }, false);
             xhr2.addEventListener("error", function(err) {
                 alert("Weather error");
@@ -36,8 +43,6 @@ function getLocationAndWeather() {
                 position.latitude + "," + position.longitude,
                 true);
             xhr2.send();
-            /////////////////////////////////////////////////////////////////////////
-            //Icon area code starts here
         }, false);
         xhr.addEventListener("error", function(err) {
             alert(

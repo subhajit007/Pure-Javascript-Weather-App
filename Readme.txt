@@ -4,15 +4,16 @@
 # 3. Renders a User Interface that displays the temperature, a text description of the current weather conditions, an icon representing those conditions, and the city.
 # API for IP geolocation and weather lookup at https://weathersync.herokuapp.com. There are two endpoints:
 # /ip
-# Get the geographic location of the requestor’s IP
+# ^ Get the geographic location of the requestor’s IP
 # /weather/$lat,$lng
-# Get weather for a given latitude & longitude
+# ^ Get weather for a given latitude & longitude
 
-# Pure javascript Code with no libraries or dependencies.
+# *******PURE JAVASCRIPT CODE WITH NO LIBRARIES OR DEPENDENCIES******
 
-# Used gem 'rack' only for deploying static page in heroku as a rails app. If you are cloning make sure you have ruby and rails environment then run $ cd <directory_name> && bundle install
+# Used rails gem 'rack' only for deploying as a static page in heroku. If you are cloning make sure you have ruby and rails environment then run $ cd <directory_name> && bundle install
 # $ rackup
 # http://localhost:9292/
 # Make it your own. run $ rm -rf .git
 # Public folder contains main code
-#url : https://sbnaweather.herokuapp.com/
+
+# url : https://sbnaweather.herokuapp.com/

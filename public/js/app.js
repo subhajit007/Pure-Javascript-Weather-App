@@ -28,6 +28,7 @@ function getLocationAndWeather() {
                 // This single line of code was really interesting for a tiny array
                 document.querySelector("#description").textContent =
                     response2.weather[0].description;
+
                 /////////////////////////////////ICON Api Call////////////////////////////////////////
                 var icon = response2.weather[0].icon;
                 document.querySelector("#icon").src =

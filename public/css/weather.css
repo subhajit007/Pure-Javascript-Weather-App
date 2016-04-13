@@ -30,6 +30,8 @@ h1 {
 
 p {
     padding: 0 1em;
+    text-transform:capitalize;
+
 }
 
 a {
